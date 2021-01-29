@@ -19,3 +19,4 @@ export class QuotesService {
         .pipe(map(response => response as any | any));
   }
 }
+ 
