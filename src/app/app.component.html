@@ -9,6 +9,7 @@
       quote="{{item.text}}" 
       author="{{item.author}}"
       color="{{getRandomColors()}}"
+      (click)="handleShowModal(item)"
     ></app-box-quoute>
   </div>
 </section>

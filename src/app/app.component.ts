@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import{ ChangeDetectorRef } from '@angular/core';
+
 import { QuotesService } from './quotes.service';
 
 @Component({
@@ -23,8 +26,12 @@ export class AppComponent extends QuotesService implements OnInit {
     let rgb = []
     for(let i = 0; i< 3; i++){
       rgb.push(Math.floor(Math.random() * 255))
-    }
-    return `rgb(${rgb.join(',')})`;
+    } 
+    return `rgba(${rgb.join(',')}, 0.5)`;
+  }
+
+  handleShowModal(item: object):void {
+    console.log(item)
   }
 
 }
